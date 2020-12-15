@@ -1,0 +1,51 @@
+/*Name:Sarthak Bhagat
+  Course name: GUI I
+  Instructor- Wenjin Zhou
+  Assignment#8 - Creating Scrabble Game Using Drag and Drop
+  sources used: https://www.w3schools.com/css,https://www.w3schools.com/js
+  https://www.w3schools.com/jquery
+  File type: .css file
+*/
+/*button is being styled*/
+.buttonstyle {
+  height: 30px;
+  width: 100px;
+  font-weight: bold;
+  background-color: gold;
+  color: black;
+  border-style: dotted;
+}
+
+/* Styling for the square images */
+.img {
+  margin: 10px;
+  border-style: dashed;
+}
+
+/*margin for square tiles/blocks*/
+.square_blocks {
+  margin: 20px;
+  border-style: dashed;
+}
+
+/*Styling for the main game board */
+.gameBoard {
+  background-image: url("../images/scrabble-tile_rack.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100px;
+  border: 1px solid black;
+  height: 10%;
+  width: 100%;
+}
+
+/*image for the board in the back */
+.square_board {
+  background-image: url("../images/scrabble.jpg");
+  background-size: cover;
+}
+
+/*Styling applied to all of body */
+body {
+  background-color: black;
+  color: gold;
+}

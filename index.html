@@ -1,0 +1,85 @@
+<!--Name:Sarthak Bhagat
+  Course name: GUI I
+  Instructor- Wenjin Zhou
+  Assignment#8 - Creating Scrabble Game Using Drag and Drop
+  sources used: https://www.w3schools.com/css, https://www.w3schools.com/js
+  https://www.w3schools.com/jquery
+  File type: .html file
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Assignment 8- Scrabble Drag and Drop</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="css/scrabble.css">
+</head>
+
+<body>
+  <!-- This is the carousel for the scrabble board -->
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/ScrabbleBoard.jpg" height="750" width="1400" class="d-block w-100" alt="...">
+      </div>
+    </div>
+  </div>
+
+  <!-- Score, Vertical and Horizontal word Tracker -->
+  <h1>Scrabble: Talking in the Tile</h1>
+  <div><b>Vertical Tiles: </b><span id="vertical_input"></span>
+    <b>Horizontal Tiles: </b><span id="horizontal_input"></span>
+    <b>Total_Score: </b><span id="Total_Score"></span>
+  </div>
+  <div id="dict"></div>
+  <div id="square_board" class="square_board">
+    <!-- Rows and Columns for square blocks. Few of them are bonus squares -->
+    <table>
+      <tr>
+        <td> <img id="0" class="square_blocks" src="images/Scrabble_Tile_Blank.jpg" height="55" width="55"></td>
+      </tr>
+      <tr>
+        <td> <img id="1" class="square_blocks" src="images/Scrabble_Tile_Blank.jpg" height="55" width="55"></td>
+      </tr>
+
+      <tr>
+        <td> <img id="2" class="square_blocks" src="images/doubleletter.jpg" height="55" width="55"></td>
+      </tr>
+      <tr>
+        <td> <img id="3" class="square_blocks" src="images/Scrabble_Tile_Blank.jpg" height="55" width="55"></td>
+      </tr>
+      <tr>
+        <td> <img id="4" class="square_blocks" src="images/Scrabble_Tile_Blank.jpg" height="55" width="55"></td>
+      </tr>
+      <tr>
+        <td> <img id="5" class="square_blocks" src="images/doubleword.png" height="55" width="55"></td>
+      </tr>
+      <tr>
+        <td> <img id="6" class="square_blocks" src="images/Scrabble_Tile_Blank.jpg" height="55" width="55"></td>
+        <td> <img id="7" class="square_blocks" src="images/Scrabble_Tile_Blank.jpg" height="55" width="55"></td>
+        <td> <img id="8" class="square_blocks" src="images/doubleletter.jpg" height="55" width="55"></td>
+        <td> <img id="9" class="square_blocks" src="images/Scrabble_Tile_Blank.jpg" height="55" width="55"></td>
+        <td> <img id="10" class="square_blocks" src="images/Scrabble_Tile_Blank.jpg" height="55" width="55"></td>
+        <td> <img id="11" class="square_blocks" src="images/doubleword.png" height="55" width="55"></td>
+        <td> <img id="12" class="square_blocks" src="images/Scrabble_Tile_Blank.jpg" height="55" width="55"></td>
+      </tr>
+    </table>
+  </div>
+  <input type="button" class="buttonstyle" value="Restart Game" onclick="play()" id="play">
+  <input type="button" class="buttonstyle" value="Submit" onclick="checkWord()" id="checkWord">
+  <input type="button" class="buttonstyle" value="Replace Word" onclick="next_Search()" id="next_Search">
+  <br />
+  <br />
+  <div id="gameBoard" class="gameBoard"></div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <script src="js/dictionary.js"></script>
+  <script src="js/scrabble.js"></script>
+
+</body>
+
+</html>
